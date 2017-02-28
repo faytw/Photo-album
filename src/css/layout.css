@@ -45,6 +45,21 @@ hr {
     border:2px double cadetblue;    
 }
 
+.image-box img {
+	border: 1px solid red;
+	height:240px;
+	width:240px;
+}
+
+.image-title {
+	padding: 3px;
+	text-align: center;
+}
+
+.image-reason {
+	padding: 3px;
+}
+
 .bottom-controller {
 	position: fixed;
 	bottom: 0;
@@ -62,8 +77,7 @@ hr {
 	position: relative;
   	display: inline-block;
     padding: .3em 1em 0;
-    margin: 20px;
-    
+    margin: 20px;   
 }
 
 .up-panel-button {
