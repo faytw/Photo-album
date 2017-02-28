@@ -7,6 +7,12 @@ hr {
 	display: none;
 }
 
+.mark {
+	color: red;
+	font-weight: bold;
+	vertical-align: top;
+}
+
 .album-container {
     max-width: 1360px;
     margin: 50px auto 40px auto;
@@ -37,27 +43,39 @@ hr {
 
 }
 
+.icon-box {
+	display: inline-block;
+	margin-left: 15px;
+}
+
 .image-box {
 	max-width: 240px;
 	margin: 0 auto;
 	height: 320px;
     background: #fff;
-    border:2px double cadetblue;    
+    border:2px double cadetblue;
+    font-weight: bold;    
+}
+
+.my-image {
+	text-align: center;
 }
 
 .image-box img {
 	border: 1px solid red;
 	height:240px;
-	width:240px;
+	width:160px;
+	text-align: center;
 }
 
 .image-title {
-	padding: 3px;
+	padding: 5px;
 	text-align: center;
 }
 
 .image-reason {
-	padding: 3px;
+	padding: 5px;
+	padding-top: 3px;
 }
 
 .bottom-controller {
