@@ -13,6 +13,23 @@ hr {
 	vertical-align: top;
 }
 
+.checked {
+	color: #295ba7;
+	font-weight: bold;
+}
+
+.preview-button {
+	width: 50px;
+	height: 50px;
+	background: red;
+	border-radius: 99em;
+	line-height: 30px;
+}
+
+.ml-style {
+	margin-left:  20px;
+}
+
 .album-container {
     max-width: 1360px;
     margin: 50px auto 40px auto;
@@ -55,6 +72,13 @@ hr {
     background: #fff;
     border:2px double cadetblue;
     font-weight: bold;    
+}
+
+.no-image {
+	max-width: 240px;
+	margin: 0 auto;
+	height: 320px;
+    background: #f4f7f7;
 }
 
 .my-image {
@@ -155,8 +179,12 @@ hr {
 	margin-right: 15px;
 }
 
-input[type="text"],input[type="file"] ,textarea {
+input[type="text"] ,textarea {
 	display: inline-block;
-	width: 170px;
+	width: 182px;
+}
+
+input[type="file"] {
+	width: 185px;
 }
 
