@@ -35,29 +35,35 @@ class CreateImage extends Component {
     }
   }
   previewImage(){
-  	        const canvas = this.refs.canvas;
-            const img = new Image();
-            const topText = this.state.topText;
-            const bottomText = this.state.bottomText;
-            const context = canvas.getContext('2d');
-        
-           
-            img.onload = function () {
-                context.drawImage(img, 40, 31, 160, 240);
-                context.fillText(topText, 70, 18); 
-                context.fillText(bottomText, 20, 290); 
-            }
+  	 const canvas = this.refs.canvas;
+     const img = new Image();
+     const topText = this.state.topText;
+     const bottomText = this.state.bottomText;
+     const context = canvas.getContext('2d');
+               
+     img.onload = function () {
+        context.drawImage(img, 40, 31, 160, 240);
+        context.fillText(topText, 70, 18); 
+        context.fillText(bottomText, 20, 290); 
+     }
           
-            img.src = this.state.imageUrl;
+     img.src = this.state.imageUrl;
            
-            this.setState({
-                step:2,
-                finished:true,
-                previewImage:true,
-            });
+     this.setState({
+        step:2,
+        finished:true,
+        previewImage:true,
+     });
+  }
+  refreshInfo(){
+    this.setState({
+        step:0,
+        topText:"",
+        bottomText:"",
+        imageUrl:"",
+    });
   }
   render() {
-   
     return (
         <div className="album-container">
           	<div className="wrapper">
@@ -69,6 +75,7 @@ class CreateImage extends Component {
                         preview={this.state.previewButton}
                         finished={this.state.finished} 
                         download={this.state.dataUrl}
+                        refresh={(e)=>this.refreshInfo()}
                         onClick={(e)=>this.previewImage()}/>
     		</div>
         	<div className="bottom-controller">
@@ -80,12 +87,12 @@ class CreateImage extends Component {
         						<label className="mr-style"><span className="mark">*</span>選取圖片&nbsp;:</label>
                                 <input type="radio" name="type" value="file" 
                                         onChange={(e)=>this.handleChange("type",e.target.value)} />
-                                        <span className={this.state.type==="file"?"checked":""}>上傳檔案</span>
+                                    <span className={this.state.type==="file"?"checked":""}>上傳檔案</span>
                                 <input className="ml-style" type="radio" name="type" value="url"
                                         defaultChecked="true"
                                         disabled={this.state.step!==0}
                                         onChange={(e)=>this.handleChange("type",e.target.value)}/>
-                                        <span className={this.state.type==="url"?"checked":""}>圖片網址</span>
+                                    <span className={this.state.type==="url"?"checked":""}>圖片網址</span>
                                 <div className="form-group">
                                     <label>
                                         <span className="mark">*</span>
@@ -113,7 +120,6 @@ class CreateImage extends Component {
         					</div>
         			    </form>
         			</div>
-        			<div className="panel-footer"></div>
         		</div>
         	</div>
         </div>
@@ -142,7 +148,11 @@ class GuideText extends Component {
         <div className="guide-box">
             <p>{guideBox[this.props.step]}
                 <span className="icon-box" onClick={this.props.preview?this.props.onClick:null}>
-                    <i className={this.props.preview?this.props.finished?"fa  fa-graduation-cap":"fa fa-eye":"fa fa-question-circle-o"}></i>
+                    <i className={this.props.preview?this.props.finished?"hidden":"fa fa-eye":"fa fa-question-circle-o"}></i>
+                </span>
+                <span className={this.props.step===2?"again":"hidden"}
+                    onClick={this.props.refresh}>
+                    <i className="fa fa-refresh"></i>&nbsp;重新玩
                 </span>
             </p>
         </div>

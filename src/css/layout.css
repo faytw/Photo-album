@@ -186,8 +186,14 @@ input[type="file"] {
     cursor: pointer;
 }
 
-.icon-box:hover {
-    color: violet;
+.icon-box:hover,
+.again:hover {
+    color: #973961;
+}
+
+.again {
+    margin-left: 15px;
+    cursor: pointer;
 }
 
 @media only screen and (max-width:1023px) {
@@ -220,6 +226,11 @@ input[type="file"] {
     }
     .step-box span:nth-of-type(odd) {
         display: inline-block;
+    }
+    .this-step {
+        background: #973961;
+        color: #fff;
+        padding: 1px 3px;
     }
 }
 
