@@ -1,33 +1,33 @@
 hr {
-	margin-top: 20px;
-	margin-bottom: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .hidden {
-	display: none;
+    display: none;
 }
 
 .mark {
-	color: red;
-	font-weight: bold;
-	vertical-align: top;
+    color: red;
+    font-weight: bold;
+    vertical-align: top;
 }
 
 .checked {
-	color: #295ba7;
-	font-weight: bold;
+    color: #295ba7;
+    font-weight: bold;
 }
 
 .preview-button {
-	width: 50px;
-	height: 50px;
-	background: red;
-	border-radius: 99em;
-	line-height: 30px;
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 99em;
+    line-height: 30px;
 }
 
 .ml-style {
-	margin-left:  20px;
+    margin-left: 20px;
 }
 
 .album-container {
@@ -37,154 +37,205 @@ hr {
 }
 
 .wrapper {
-	max-width: 1300px;
-	margin: 0 auto;
+    max-width: 1300px;
+    margin: 0 auto;
     margin-top: 20px;
 }
 
-.step-box,.guide-box {
-	max-width: 570px;
-	margin: 20px auto;
-	height: 24px;
-	line-height: 24px;
-	text-align: center;
-	background: #f5f5f5;
+.step-box,
+.guide-box {
+    max-width: 570px;
+    margin: 20px auto;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.guide-box {
+    border: 0.1em dotted #973961;
+}
+
+.this-step {
+    border-bottom: 0.2em double #973961;
 }
 
 .step-box span {
-	margin-right: 15px;
-	margin-left: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 
-.step-box span:nth-of-type(odd) {
-
-}
+.step-box span:nth-of-type(odd) {}
 
 .icon-box {
-	display: inline-block;
-	margin-left: 15px;
+    display: inline-block;
+    margin-left: 15px;
 }
 
 .image-box {
-	max-width: 240px;
-	margin: 0 auto;
-	height: 320px;
+    max-width: 240px;
+    margin: 0 auto;
+    height: 320px;
     background: #fff;
-    border:2px double cadetblue;
-    font-weight: bold;    
+    border: 2px double cadetblue;
+    font-weight: bold;
 }
 
 .no-image {
-	max-width: 240px;
-	margin: 0 auto;
-	height: 320px;
+    max-width: 240px;
+    margin: 0 auto;
+    height: 320px;
     background: #f4f7f7;
 }
 
 .my-image {
-	text-align: center;
+    text-align: center;
 }
 
 .image-box img {
-	border: 1px solid red;
-	height:240px;
-	width:160px;
-	text-align: center;
-}
-
-.image-title {
-	padding: 5px;
-	text-align: center;
-}
-
-.image-reason {
-	padding: 5px;
-	padding-top: 3px;
+    border: 1px solid red;
+    height: 240px;
+    width: 160px;
+    text-align: center;
 }
 
 .bottom-controller {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 30px;
-	text-align: center;
-	padding-bottom: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    text-align: center;
+    padding-bottom: 15px;
 }
 
 .panel-button {
-	width: 100px;
-	height: 20px;
-	line-height: 20px;
-	position: relative;
-  	display: inline-block;
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    display: inline-block;
     padding: .3em 1em 0;
-    margin: 20px;   
+    margin: 20px;
 }
 
 .up-panel-button {
-	width: 100px;
-	height: 20px;
-	line-height: 20px;
-	position: relative;
-  	display: inline-block;
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    display: inline-block;
     padding: .3em 1em 0;
     margin: 20px;
     bottom: 200px;
 }
 
-
 .panel-button:before,
 .up-panel-button:before {
-	content: '';
+    content: '';
     position: absolute;
-    top: 0; 
-    right: 0; 
-    bottom: 0; 
+    top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
     z-index: -1;
     background: #fff;
-    background-image: linear-gradient(
-    hsla(0,0%,100%,.6),
-    hsla(0,0%,100%,0));
+    background-image: linear-gradient( hsla(0, 0%, 100%, .6), hsla(0, 0%, 100%, 0));
     border: 2px solid cadetblue;
     border-bottom: 2px solid #fff;
     border-radius: .5em .5em 0 0;
     box-shadow: 0 .15em white inset;
     transform: perspective(.5em) rotateX(5deg);
-    transform-origin: bottom;	
+    transform-origin: bottom;
 }
 
 .panel {
-	display: block;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: #fff;
-	z-index: -2;
-	border-top: 1px solid cadetblue;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    z-index: -2;
+    border-top: 0.1em solid cadetblue;
 }
 
 .form-group {
-	margin: 16px;
+    margin: 16px;
 }
 
 .form-group:first-child {
-	margin: 17px;
+    margin: 17px;
 }
 
 .form-group label {
-	vertical-align: top;
-	margin-right: 15px;
+    vertical-align: top;
+    margin-right: 15px;
 }
 
-input[type="text"] ,textarea {
-	display: inline-block;
-	width: 182px;
+input[type="text"],
+textarea {
+    display: inline-block;
+    width: 182px;
 }
 
 input[type="file"] {
-	width: 185px;
+    width: 185px;
 }
 
+.icon-box {
+    cursor: pointer;
+}
+
+.icon-box:hover {
+    color: violet;
+}
+
+@media only screen and (max-width:1023px) {
+    .wrapper {
+        height: 600px;
+    }
+    .bottom-controller {
+        position: relative;
+    }
+}
+
+@media only screen and (max-width:769px) {
+    .step-box span:nth-of-type(even) {
+        display: none;
+    }
+}
+
+@media only screen and (max-width:426px) {
+    .album-container {
+        margin-top: 20px;
+    }
+    .wrapper {
+        height: 690px;
+        margin-top: 0px;
+    }
+    .step-box {
+        max-width: 200px;
+        height: 75px;
+        text-align: left;
+    }
+    .step-box span:nth-of-type(odd) {
+        display: inline-block;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .wrapper {
+        height: 750px;
+    }
+    .up-panel-button {
+        bottom: 285px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"],
+    textarea {
+        width: 200px;
+    }
+}
